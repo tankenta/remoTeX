@@ -39,31 +39,35 @@ $max_repeat = 5;
 $pdf_mode = 3;	# use dvipdf
 ```
 
+## Install
+```
+$ mkdir -p ~/local/src
+$ git clone https://github.com/tankenta/remotex.git ~/local/src/
+$ chmod +x ~/local/src/remotex/remotex.py
+$ mkdir -p ~/local/bin
+$ ln -s /home/your-user-name/local/src/remotex/remotex.py ~/local/bin/remotex
+$ export PATH="$PATH:~/local/bin"
+```
+
 ## Configuration
 Edit your config file of remoTeX `remotex/config.py`.
 ```
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-host = 'your-server-host-name'
+host = 'your-server'
 server_workdir = '~/documents'	# example
-```
-
-## Install
-```
-mkdir -p ~/local/src
-git clone https://github.com/tankenta/remotex.git ~/local/src/
-chmod +x ~/local/src/remotex/remotex.py
-mkdir -p ~/local/bin
-ln -s /home/your-use-name/local/src/remotex/remotex.py ~/local/bin/remotex
-export PATH="$PATH:~/local/bin"
 ```
 
 ## Usage
 ```
-remotex /path/to/your/project/directory
+$ remotex /path/to/your/project/directory
 ```
 or
 ```
-cd /path/to/your/project/directory
-remotex
+$ cd /path/to/your/project/directory
+$ remotex
 ```
+
+## TODO
+* [ ] Supports various `.latexmkrc` settings and command options of `latexmk`.
+* [ ] Receives only a target pdf file.

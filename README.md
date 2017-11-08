@@ -71,3 +71,4 @@ $ remotex
 ## TODO
 * [ ] Supports various `.latexmkrc` settings and command options of `latexmk`.
 * [ ] Receives only a target pdf file.
+* [ ] Maneges multiple source files.
